@@ -4,8 +4,6 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBarActivity;
-import android.view.Menu;
-import android.view.MenuInflater;
 
 public abstract class BaseFragment extends Fragment {
 
@@ -26,10 +24,4 @@ public abstract class BaseFragment extends Fragment {
         ((ActionBarActivity) activity).getSupportActionBar().setTitle(getTitie());
     }
 
-    @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        // update menu.
-        ((ActionBarActivity) getActivity()).supportInvalidateOptionsMenu();
-        super.onCreateOptionsMenu(menu, inflater);
-    }
 }
